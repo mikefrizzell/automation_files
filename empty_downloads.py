@@ -10,7 +10,7 @@ downloads_folder = "/Users/<username>/Downloads"
 for root, dirs, files in os.walk(downloads_folder):
     for filename in files + dirs:
         file_path = os.path.join(root, filename)
-        if filename.endswith(".zip") or filename.endswith(".app") or filename.endswith(".doc") or filename.endswith(".docx") or filename.endswith(".png") or filename.endswith(".jpg") or filename.endswith(".gif"):
+        if filename.endswith(".zip") or filename.endswith(".app") or filename.endswith(".doc") or filename.endswith(".docx") or filename.endswith(".png") or filename.endswith(".jpg") or filename.endswith(".gif") or filename.endswith(".dmg") or filename.endswith(".xls") or filename.endswith(".xlsx") or filename.endswith(".csv"):
             try:
                 if os.path.isfile(file_path) or os.path.islink(file_path):
                     os.unlink(file_path)
